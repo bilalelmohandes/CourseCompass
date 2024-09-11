@@ -2,7 +2,7 @@ import React from "react";
 import { Typography } from "antd";
 import CourseSearch from "../../components/CourseSearch/CourseSearch";
 import CategoryCards from "../../components/CategoryCards/CategoryCards";
-import "./HomePage.css";
+import "./Homepage.css";
 
 const { Title } = Typography;
 
