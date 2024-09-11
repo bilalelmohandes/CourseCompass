@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Row, Col } from "antd";
-import { courses, Course } from "../../data";
+import { courses, Course, Category } from "../../data";
 import "devicon/devicon.min.css";
 import "./CategoryCards.css";
 
 const CategoryCards: React.FC = () => {
   // Extract unique categories from all courses
-  const allCategories = courses.reduce((acc: string[], course: Course) => {
+  const allCategories = courses.reduce((acc: Category[], course: Course) => {
     course.categories.forEach((category) => {
       if (!acc.includes(category)) {
         acc.push(category);
@@ -16,21 +16,23 @@ const CategoryCards: React.FC = () => {
   }, []);
 
   // Function to map category names to Devicon classes
-  const getCategoryIconClass = (category: string): string => {
-    const iconMap: { [key: string]: string } = {
-      React: "devicon-react-original colored",
-      Python: "devicon-python-plain colored",
-      JavaScript: "devicon-javascript-plain colored",
+  const getCategoryIconClass = (category: Category): string => {
+    const iconMap: { [key in Category]?: string } = {
       "Web Development": "devicon-html5-plain colored",
-      "Machine Learning": "devicon-tensorflow-original colored",
-      "Data Science": "devicon-pandas-original colored",
-      "Cloud Computing": "devicon-amazonwebservices-original colored",
-      "Mobile Development": "devicon-android-plain colored",
-      Cybersecurity: "devicon-ssh-original-wordmark",
-      Database: "devicon-mongodb-plain colored",
-      // Add more mappings as needed
+      "Programming Languages & Software Engineering":
+        "devicon-javascript-plain colored",
+      "Data Science & Analytics": "devicon-pandas-original colored",
+      "Artificial Intelligence & Machine Learning":
+        "devicon-tensorflow-original colored",
+      "Cloud Computing & DevOps": "devicon-amazonwebservices-original colored",
+      "Cybersecurity & Networking": "devicon-ssh-original-wordmark",
+      "Mobile App Development": "devicon-android-plain colored",
+      "Databases & Big Data": "devicon-mongodb-plain colored",
+      "Algorithms & Data Structures": "devicon-python-plain colored",
+      "IT Fundamentals & Support": "devicon-linux-plain",
+      "Software Architecture & Design Patterns": "devicon-docker-plain colored",
+      "Specialized Computer Science Topics": "devicon-atom-original colored",
     };
-
     return iconMap[category] || "devicon-devicon-plain"; // Default icon
   };
 

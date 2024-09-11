@@ -42,7 +42,7 @@ const CourseSearch: React.FC = () => {
     setOptions(newOptions);
   };
 
-  const onSelect = (value: string, option: OptionType): void => {
+  const onSelect = (_: string, option: OptionType): void => {
     setSelectedCourse(option.course);
   };
 
