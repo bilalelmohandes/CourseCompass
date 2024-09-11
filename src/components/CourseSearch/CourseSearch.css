@@ -1,0 +1,42 @@
+.course-search {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.course-search h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.course-search .search-bar {
+  width: 100%;
+}
+
+.course-search .ant-input-affix-wrapper {
+  height: 60px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-search .ant-input-affix-wrapper:hover,
+.course-search .ant-input-affix-wrapper:focus {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-search .ant-input-prefix {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+.course-search .course-card {
+  margin-top: 30px;
+  width: 100%;
+  text-align: left;
+}
+
+.course-search .ant-card-head-title {
+  white-space: normal;
+}

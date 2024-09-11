@@ -1,0 +1,163 @@
+/* Existing styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* New styles for full-screen layout */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+.ant-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-layout-header {
+  display: flex;
+  align-items: center;
+}
+
+.ant-layout-content {
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.ant-layout-footer {
+  text-align: center;
+}
+
+/* Style for the logo in the header */
+.header-logo {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+/* Make the menu take up remaining space */
+.ant-menu {
+  flex-grow: 1;
+}
+
+/* Styles for navigation menu items */
+.ant-menu-item a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+}
+
+.ant-menu-item-selected a,
+.ant-menu-item a:hover {
+  color: #fff;
+}
+
+/* Ensure the content area has some minimum height */
+.ant-layout-content {
+  min-height: calc(
+    100vh - 64px - 70px
+  ); /* Subtract header and footer heights */
+}
+
+/* Styles for navigation menu items */
+.ant-menu-item a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+}
+
+.ant-menu-item-selected a,
+.ant-menu-item a:hover {
+  color: #fff;
+}
+
+/* Remove blue color from selected menu items */
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
+  background-color: transparent !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected .ant-menu-item-icon + span,
+.ant-menu-dark .ant-menu-item-selected .anticon + span {
+  color: #fff;
+}
+
+/* Ensure the content area has some minimum height */
+.ant-layout-content {
+  min-height: calc(
+    100vh - 64px - 70px
+  ); /* Subtract header and footer heights */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 22px; /* Slightly increased from 20px */
+}
+
+.app-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 12px; /* Slightly increased from 10px */
+}
+
+/* Ensure the menu takes up the remaining space */
+.ant-menu {
+  flex: 1;
+}
